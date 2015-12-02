@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data base:</strong>
+  <%= @db_connect.data_base %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @db_connect.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @db_connect.password %>
+</p>
+
+<%= link_to 'Edit', edit_db_connect_path(@db_connect) %> |
+<%= link_to 'Back', db_connects_path %>

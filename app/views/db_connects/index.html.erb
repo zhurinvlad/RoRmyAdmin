@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Db Connects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data base</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @db_connects.each do |db_connect| %>
+      <tr>
+        <td><%= db_connect.data_base %></td>
+        <td><%= db_connect.username %></td>
+        <td><%= db_connect.password %></td>
+        <td><%= link_to 'Show', db_connect %></td>
+        <td><%= link_to 'Edit', edit_db_connect_path(db_connect) %></td>
+        <td><%= link_to 'Destroy', db_connect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Db connect', new_db_connect_path %>
