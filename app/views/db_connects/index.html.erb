@@ -15,7 +15,7 @@
   <tbody>
     <% @db_connects.each do |db_connect| %>
       <tr>
-        <td><%= db_connect.data_base %></td>
+        <td><%= link_to db_connect.data_base, schemas_path(db_connect) %></td>
         <td><%= db_connect.username %></td>
         <td> **** </td>
         <td><%= link_to 'Изменить', edit_db_connect_path(db_connect) %> <%= link_to 'Удалить', db_connect, method: :delete, data: { confirm: 'Вы уверены?' } %></td>

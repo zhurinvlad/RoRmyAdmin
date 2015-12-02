@@ -10,6 +10,7 @@ class DbConnectsController < ApplicationController
   # GET /db_connects/1
   # GET /db_connects/1.json
   def show
+
   end
 
   # GET /db_connects/new
@@ -40,6 +41,7 @@ class DbConnectsController < ApplicationController
   # PATCH/PUT /db_connects/1
   # PATCH/PUT /db_connects/1.json
   def update
+
     respond_to do |format|
       if @db_connect.update(db_connect_params)
         format.html { redirect_to db_connects_url, notice: 'Подключение успешно обновлено.' }
@@ -71,4 +73,5 @@ class DbConnectsController < ApplicationController
     def db_connect_params
       params.require(:db_connect).permit(:data_base, :username, :password)
     end
+
 end
