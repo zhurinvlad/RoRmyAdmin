@@ -28,7 +28,7 @@ class DbConnectsController < ApplicationController
 
     respond_to do |format|
       if @db_connect.save
-        format.html { redirect_to @db_connect, notice: 'Db connect was successfully created.' }
+        format.html { redirect_to db_connects_url, notice: 'Подключение успешно создано.' }
         format.json { render :show, status: :created, location: @db_connect }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class DbConnectsController < ApplicationController
   def update
     respond_to do |format|
       if @db_connect.update(db_connect_params)
-        format.html { redirect_to @db_connect, notice: 'Db connect was successfully updated.' }
+        format.html { redirect_to db_connects_url, notice: 'Подключение успешно обновлено.' }
         format.json { render :show, status: :ok, location: @db_connect }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class DbConnectsController < ApplicationController
   def destroy
     @db_connect.destroy
     respond_to do |format|
-      format.html { redirect_to db_connects_url, notice: 'Db connect was successfully destroyed.' }
+      format.html { redirect_to db_connects_url, notice: 'Подключение было уничтожено.' }
       format.json { head :no_content }
     end
   end
