@@ -1,0 +1,21 @@
+I"R(function() {
+  $(document).on("page:change", function() {
+    setTimeout(function() {
+      return $("table.table-condensed.table-striped.table").fixedHeaderTable({
+        footer: false,
+        cloneHeadToFoot: false,
+        fixedColumn: true,
+        height: "" + ($(window).height() - 250),
+        width: "" + ($(window).width() - 400),
+        fixedColumns: 2
+      });
+    }, 500);
+    return $("#table-list").on('change', function(e) {
+      var url;
+      url = $(e.target).data("url") + ("/" + ($(e.target).val()));
+      return Turbolinks.visit(url);
+    });
+  });
+
+}).call(this);
+:ET

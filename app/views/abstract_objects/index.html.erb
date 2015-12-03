@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Abstract Objects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @abstract_objects.each do |abstract_object| %>
+      <tr>
+        <td><%= link_to 'Show', abstract_object %></td>
+        <td><%= link_to 'Edit', edit_abstract_object_path(abstract_object) %></td>
+        <td><%= link_to 'Destroy', abstract_object, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Abstract object', new_abstract_object_path %>

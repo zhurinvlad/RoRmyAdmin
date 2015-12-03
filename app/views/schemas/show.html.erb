@@ -1,10 +1,8 @@
-<h1>Доступные таблицы</h1>
 
-<div class="container-fluid">
-      <ul class = "tables_list">
-          <li class = "nav-header">
-            <br>
-            <%= select_tag :name, options_for_select(@schema.get_tables, @name), style: "width:300px", include_blank: true%>
-          </li>
-      </ul>
-</div>
+<%= debug @model %>
+<% unless @model %>
+	<h1> kkk</h1> 
+<% end %>
+<% if @model %>
+	<h1><% @name.humanize %></h1> 
+<% end %>

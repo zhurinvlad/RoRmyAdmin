@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+  $("#table-list").on 'change', (e) ->
+    url = $(e.target).data("url") + "/#{$(e.target).val()}"
+    Turbolinks.visit url
