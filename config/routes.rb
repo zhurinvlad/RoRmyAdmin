@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  resources :schemas
-  resources :db_connects
+  resources :db_connects, :except => [:show]
+
+  get "db_connects/:id/schemas(/:name)" => "schemas#show", :as => :schemas
+  get "db_connects/:id/schemas/:name" => "schemas#show", :as => :schema
+
+  #scope "abstract/:connection_id/schema/:name/" do
+  # resources :abstracts, controller: 'abstract_objects'
+  #end
+
   root to:'db_connects#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

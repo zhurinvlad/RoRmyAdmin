@@ -1,5 +1,6 @@
 class SchemasController < ApplicationController
 
+
   def search
     collection
     render :show
