@@ -1,7 +1,7 @@
 class DbConnect < ActiveRecord::Base
 	validates :data_base, :username, :password, :presence => :true
 	validate :working_configuration
-	
+
 	def config
 	{database: data_base, username: username, password: password, adapter: 'postgresql', host: 'localhost', encoding: 'utf8'}
 	end

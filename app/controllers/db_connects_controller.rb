@@ -1,6 +1,5 @@
 class DbConnectsController < ApplicationController
   before_action :set_db_connect, only: [:show, :edit, :update, :destroy]
-
   # GET /db_connects
   # GET /db_connects.json
   def index
