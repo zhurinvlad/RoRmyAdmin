@@ -1,0 +1,9 @@
+I"Â(function() {
+  $("#table-list").on('change', function(e) {
+    var url;
+    url = $(e.target).data("url") + ("/" + ($(e.target).val()));
+    return Turbolinks.visit(url);
+  });
+
+}).call(this);
+:ET

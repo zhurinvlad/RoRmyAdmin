@@ -23,9 +23,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg'
+
 gem 'ransack'
-
-
 gem 'inherited_resources'
 gem 'simple_form'
 gem 'haml'

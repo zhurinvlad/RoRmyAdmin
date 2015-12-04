@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
+//= require nprogress
+//= require nprogress-turbolinks
 //= require_tree .
-  $("#table-list").on 'change', (e) ->
-    url = $(e.target).data("url") + "/#{$(e.target).val()}"
-    Turbolinks.visit url

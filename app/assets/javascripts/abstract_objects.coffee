@@ -1,9 +1,12 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
+
+
+#отрисовка таблиц при выборе или селектора
 $(document).on "page:change", ->
   setTimeout ->
-    $("table.table-condensed.table-striped.table").fixedHeaderTable
+    $("tableelem").fixedHeaderTable
       footer: false
       cloneHeadToFoot: false
       fixedColumn: true
