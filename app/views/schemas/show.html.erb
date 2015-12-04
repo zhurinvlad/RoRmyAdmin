@@ -3,6 +3,10 @@
 	<h1> Пожалуйста, выберите таблицу</h1> 
 <% else %>
 	<h1> <%=  @name.humanize %></h1> 
+
+	  <% if @columns_names.include?("id")%>
+   <%= link_to 'Добавить',new_abstract_path(@db_connect, name: @name)%>
+      <% end %>
 	<table border="1">
 	    <thead>
 	      <tr>
@@ -27,7 +31,13 @@
 
 
 	           <td>
-	            Кнопки
+	        <%  if res.respond_to?(:id) && !res.id.blank?  %>
+             <%= link_to "Редактировать",
+                edit_abstract_path(res, connection_id: @db_connect.id, name: @name)%>
+
+              <%= link_to "Удалить",
+                abstract_path(res, connection_id: @db_connect.id, name: @name), method: :delete, data: { confirm: 'Are you sure?' } %>
+                <% end %>
 	           </td>
 	         </tr>
 	       <% end %>

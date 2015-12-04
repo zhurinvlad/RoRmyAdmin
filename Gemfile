@@ -30,11 +30,10 @@ gem 'simple_form'
 gem 'haml'
 gem "therubyracer"
 gem "less-rails"
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem "country_select"
 gem 'nprogress-rails'
-
-
+gem 'responders', '~> 2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

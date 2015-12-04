@@ -1,7 +1,23 @@
 
 
-
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_abstract_object_path(@abstract_object) %> |
-<%= link_to 'Back', abstract_objects_path %>
+<h1><% " #{@model_name}" %></h1>
+      
+<p class = "action-buttons">
+  <%= link_to 'Удалить',  
+    abstract_path(@abstract_object, connection_id: @db_connect.id, name: @name), method: :delete, data: { confirm: 'Are you sure?' },  :class => 'btn btn-danger pull-right'%>
+  
+  <%= link_to 'Изменить',  
+    edit_abstract_path(@abstract_object, connection_id: @db_connect.id, name: @name),
+    :class => 'btn btn-primary pull-right'%>
+    
+  <%= link_to 'Назад', schema_path(@db_connect, name: @name),:class => 'btn pull-right'%>
+</p>
+  
+<table class="table">
+  <% @schema.get_table_attributes(@name).each do |attr|%>
+    <tr>
+      <th><%= attr %></th>
+      <td><%= @abstract_object.send(attr) %></td>
+    </tr>
+  <% end %>
+</table>

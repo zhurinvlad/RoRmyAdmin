@@ -5,24 +5,28 @@ class AbstractObjectsController < ApplicationController
   before_filter :setup_class
 
   def create
-    create!{schema_path(@db_connects, name: @name)}
+    create!{schema_path(@db_connect, name: @name)}
   end
 
   def update
-    update!{schema_path(@db_connects, name: @name)}
+    update!{schema_path(@db_connect, name: @name)}
   end
 
   def destroy
-    destroy!{schema_path(@db_connects, name: @name)}
+    destroy!{schema_path(@db_connect, name: @name)}
   end
 
   private
 
   def setup_class
-    @db_connects = DbConnect.find(params[:connection_id])
-    @schema = Schema.new(@db_connects.config)
+    @db_connect = DbConnect.find(params[:connection_id])
+    @schema = Schema.new(@db_connect.config)
     @name = params[:name]
     @model_name = @name.humanize
     self.class.resource_class = @schema.get_schemas[@name]
+  end
+
+  def user_params 
+    params.require(:user).permit(User.fields.keys)
   end
 end
