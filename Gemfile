@@ -23,8 +23,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg'
-gem 'rspec'
+
 gem 'rspec-rails'
+gem "database_cleaner"
+gem 'factory_girl_rails'
+
 gem 'ransack'
 gem 'inherited_resources'
 gem 'simple_form'

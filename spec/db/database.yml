@@ -1,0 +1,9 @@
+test:
+  database: DBConnect_test
+  adapter: postgresql
+  pool: 5
+  encoding: utf8
+  username: postgres
+  password: 130994
+
+
