@@ -26,6 +26,7 @@ gem 'pg'
 
 gem 'rspec-rails'
 gem "database_cleaner"
+gem "capybara"
 gem 'factory_girl_rails'
 
 gem 'ransack'
