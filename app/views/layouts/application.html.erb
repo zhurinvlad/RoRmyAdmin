@@ -16,9 +16,10 @@
 	<div class="container-fluid">
 
 	      <ul class = "tables_list">
-				<h1>Доступные таблицы</h1>
+			
 	          <li class = "nav-header">
 	            <br>
+	            <%= label_tag :name, "Доступные таблицы"%> 
 	            <%= select_tag :name, options_for_select(@schema.get_tables, @name), id: "table-list",  style: "width:300px",  data: {url: schemas_path(@db_connect)} ,include_blank: true%>
 	          </li>
       </ul>

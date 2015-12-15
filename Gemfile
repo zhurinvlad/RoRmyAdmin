@@ -28,7 +28,7 @@ gem 'rspec-rails'
 gem "database_cleaner"
 gem "capybara"
 gem 'factory_girl_rails'
-
+gem 'rspec-rails-mocha'
 gem 'ransack'
 gem 'inherited_resources'
 gem 'simple_form'

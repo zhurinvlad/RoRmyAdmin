@@ -7,7 +7,7 @@ class DbConnect < ActiveRecord::Base
 	end
 
 	def to_s
-		title.present? ? title : database
+		data_base
 	end
 
     private

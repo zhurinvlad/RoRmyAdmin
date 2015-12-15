@@ -106,9 +106,12 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    metaclass (0.0.4)
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
     multi_json (1.11.2)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
@@ -170,6 +173,9 @@ GEM
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
+    rspec-rails-mocha (0.3.2)
+      mocha (>= 0.9.8)
+      rspec-rails (>= 2.0.0)
     rspec-support (3.4.1)
     sass (3.4.19)
     sass-rails (5.0.4)
@@ -242,6 +248,7 @@ DEPENDENCIES
   ransack
   responders (~> 2.0)
   rspec-rails
+  rspec-rails-mocha
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form

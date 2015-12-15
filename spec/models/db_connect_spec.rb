@@ -1,7 +1,21 @@
 require_relative '../spec_helper'
-
+require 'rspec/rails'
+require 'rspec/rails/mocha'
 RSpec.describe DbConnect do
- 	describe "attributes" do
+
+  it "generates a constant" do
+    Object.const_defined?(:Car).should be false
+    mock_model("Car")
+    Object.const_defined?(:Car).should be true
+  end
+
+  it "says it is a Car" do
+      car = mock_model("Car")
+      car.should be_a(Car)
+      Car.any_instance.stubs(:speed).returns(100)
+  end
+
+  describe "attributes" do
 	    [:data_base, :username, :password].each do |attr|
 	      it "have #{attr} attribute" do
 	        connection = DbConnect.new
@@ -30,5 +44,18 @@ RSpec.describe DbConnect do
 	    end
     end
 
+
+	  describe "namedb" do
+	    it "respond to data_base" do
+	      connection = FactoryGirl.create(:db_connect)
+	      connection.should respond_to(:data_base)
+	    end
+	  end
+
+	 it "to_s return database name if title nil" do
+	    connection = FactoryGirl.create(:db_connect)
+	    connection.data_base = nil
+	    connection.to_s.should == connection.data_base
+	 end
 
 end

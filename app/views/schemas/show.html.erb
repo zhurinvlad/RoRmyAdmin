@@ -7,7 +7,7 @@
 	  <% if @columns_names.include?("id")%>
    <%= link_to 'Добавить',new_abstract_path(@db_connect, name: @name)%>
       <% end %>
-	<table id = "tableelem" border="1">
+	<table class = "tableelem" border="1">
 	    <thead>
 	      <tr>
 	       <% @columns_names.each do |name| %>
