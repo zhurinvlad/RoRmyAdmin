@@ -8,6 +8,7 @@ ActiveRecord::Schema.define(:version => 0) do
     t.integer :integer_1
     t.string :country
     t.string :state
+    
   end
   
 end

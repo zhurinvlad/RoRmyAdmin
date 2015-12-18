@@ -23,7 +23,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg'
-
+gem 'mysql2'
+gem 'guard'
+gem 'guard-test'
+gem 'guard-bundler'
+gem 'guard-rspec', require: false
+gem 'rspec'
+gem 'simplecov'
 gem 'rspec-rails'
 gem "database_cleaner"
 gem "capybara"

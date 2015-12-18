@@ -4,6 +4,6 @@ test:
   pool: 5
   encoding: utf8
   username: postgres
-  password: 
+  password: 130994
 
 

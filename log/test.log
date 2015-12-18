@@ -20663,3 +20663,2146 @@ Processing by SchemasController#show as HTML
   Rendered schemas/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 18ms (Views: 1.3ms | ActiveRecord: 3.2ms)
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "db_connects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "articles" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m            SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+
+  [1m[36m (2.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'DBConnect_test'[0m
+  [1m[35m (42.6ms)[0m  TRUNCATE TABLE "public"."db_connects", "public"."articles" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "articles" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:20:02.895322"], ["updated_at", "2015-12-18 07:20:02.895322"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:20:02.983027"], ["updated_at", "2015-12-18 07:20:02.983027"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:20:03.001183"], ["updated_at", "2015-12-18 07:20:03.001183"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:20:03.034398"], ["updated_at", "2015-12-18 07:20:03.034398"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:20:03.079238"], ["updated_at", "2015-12-18 07:20:03.079238"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 229ms (Views: 222.8ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/5/schemas" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDbConnect Load (0.1ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered schemas/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 4.8ms | ActiveRecord: 3.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:20:03.372783"], ["updated_at", "2015-12-18 07:20:03.372783"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "db_connects"
+Started DELETE "/db_connects/6" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.1ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "db_connects"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:20:03.410320"], ["updated_at", "2015-12-18 07:20:03.410320"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.4ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+Started GET "/db_connects/7/schemas" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered schemas/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 26ms (Views: 1.4ms | ActiveRecord: 3.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:20:03.466296"], ["updated_at", "2015-12-18 07:20:03.466296"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/8/edit" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mDbConnect Load (0.4ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered db_connects/_form.html.erb (3.5ms)
+  Rendered db_connects/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:20:03.504877"], ["updated_at", "2015-12-18 07:20:03.504877"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+Started DELETE "/db_connects/9" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.1ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.8ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (2.2ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.7ms)
+  Rendered db_connects/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.7ms)
+  Rendered db_connects/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (2.1ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:20:03.601024"], ["updated_at", "2015-12-18 07:20:03.601024"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects/10/schemas" for 127.0.0.1 at 2015-12-18 10:20:03 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 1.5ms | ActiveRecord: 3.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "articles" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m            SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+
+  [1m[36m (0.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'DBConnect_test'[0m
+  [1m[35m (36.2ms)[0m  TRUNCATE TABLE "public"."db_connects", "public"."articles" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "articles" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:44:41.860494"], ["updated_at", "2015-12-18 07:44:41.860494"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:44:41.943609"], ["updated_at", "2015-12-18 07:44:41.943609"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:44:41.963265"], ["updated_at", "2015-12-18 07:44:41.963265"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:44:42.011596"], ["updated_at", "2015-12-18 07:44:42.011596"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:44:42.059532"], ["updated_at", "2015-12-18 07:44:42.059532"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.6ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 215ms (Views: 207.8ms | ActiveRecord: 0.6ms)
+Started GET "/db_connects/5/schemas" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDbConnect Load (0.3ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered schemas/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 4.8ms | ActiveRecord: 3.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:44:42.351243"], ["updated_at", "2015-12-18 07:44:42.351243"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "db_connects"
+Started DELETE "/db_connects/6" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "db_connects"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:44:42.390716"], ["updated_at", "2015-12-18 07:44:42.390716"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects/7/schemas" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDbConnect Load (0.3ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered schemas/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 19ms (Views: 1.5ms | ActiveRecord: 3.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:44:42.440581"], ["updated_at", "2015-12-18 07:44:42.440581"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.3ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects/8/edit" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered db_connects/_form.html.erb (3.1ms)
+  Rendered db_connects/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:44:42.479401"], ["updated_at", "2015-12-18 07:44:42.479401"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started DELETE "/db_connects/9" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.1ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.8ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (2.2ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.7ms)
+  Rendered db_connects/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.2ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (2.4ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:44:42.612153"], ["updated_at", "2015-12-18 07:44:42.612153"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects/10/schemas" for 127.0.0.1 at 2015-12-18 10:44:42 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 1.5ms | ActiveRecord: 3.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "articles" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m            SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+
+  [1m[36m (0.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'DBConnect_test'[0m
+  [1m[35m (37.7ms)[0m  TRUNCATE TABLE "public"."db_connects", "public"."articles" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "articles" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:56:34.713737"], ["updated_at", "2015-12-18 07:56:34.713737"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:56:34.797678"], ["updated_at", "2015-12-18 07:56:34.797678"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:56:34.816040"], ["updated_at", "2015-12-18 07:56:34.816040"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:56:34.849406"], ["updated_at", "2015-12-18 07:56:34.849406"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:56:34.896193"], ["updated_at", "2015-12-18 07:56:34.896193"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:56:34 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 210ms (Views: 203.4ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects/5/schemas" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDbConnect Load (0.3ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered schemas/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 39ms (Views: 6.2ms | ActiveRecord: 3.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:56:35.188825"], ["updated_at", "2015-12-18 07:56:35.188825"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "db_connects"
+Started DELETE "/db_connects/6" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "db_connects"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:56:35.252111"], ["updated_at", "2015-12-18 07:56:35.252111"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/7/schemas" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 1.7ms | ActiveRecord: 3.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:56:35.303187"], ["updated_at", "2015-12-18 07:56:35.303187"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/8/edit" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered db_connects/_form.html.erb (5.6ms)
+  Rendered db_connects/edit.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:56:35.369703"], ["updated_at", "2015-12-18 07:56:35.369703"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+Started DELETE "/db_connects/9" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDbConnect Load (0.3ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.1ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.2ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (4.3ms)
+  Rendered db_connects/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 29ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.2ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.2ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (4.3ms)
+  Rendered db_connects/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 19ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 07:56:35.533045"], ["updated_at", "2015-12-18 07:56:35.533045"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects/10/schemas" for 127.0.0.1 at 2015-12-18 10:56:35 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 1.5ms | ActiveRecord: 3.6ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "articles" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m            SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+
+  [1m[36m (0.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'DBConnect_test'[0m
+  [1m[35m (38.5ms)[0m  TRUNCATE TABLE "public"."db_connects", "public"."articles" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "articles" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:09:55.758139"], ["updated_at", "2015-12-18 08:09:55.758139"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:09:55.842907"], ["updated_at", "2015-12-18 08:09:55.842907"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:09:55.874982"], ["updated_at", "2015-12-18 08:09:55.874982"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:09:55.910293"], ["updated_at", "2015-12-18 08:09:55.910293"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:09:55.956202"], ["updated_at", "2015-12-18 08:09:55.956202"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:09:55 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 251ms (Views: 243.7ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects/5/schemas" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered schemas/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 7.4ms | ActiveRecord: 3.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:09:56.288246"], ["updated_at", "2015-12-18 08:09:56.288246"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "db_connects"
+Started DELETE "/db_connects/6" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.1ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "db_connects"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:09:56.350175"], ["updated_at", "2015-12-18 08:09:56.350175"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/7/schemas" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered schemas/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 2.2ms | ActiveRecord: 3.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:09:56.415045"], ["updated_at", "2015-12-18 08:09:56.415045"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/8/edit" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered db_connects/_form.html.erb (3.1ms)
+  Rendered db_connects/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:09:56.453043"], ["updated_at", "2015-12-18 08:09:56.453043"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+Started DELETE "/db_connects/9" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.1ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.8ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (2.3ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 13ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.8ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.7ms)
+  Rendered db_connects/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (2.1ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:09:56.553530"], ["updated_at", "2015-12-18 08:09:56.553530"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects/10/schemas" for 127.0.0.1 at 2015-12-18 11:09:56 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 1.4ms | ActiveRecord: 3.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "articles" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.9ms)[0m            SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+
+  [1m[36m (0.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'DBConnect_test'[0m
+  [1m[35m (37.8ms)[0m  TRUNCATE TABLE "public"."db_connects", "public"."articles" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "articles" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:10:06.293750"], ["updated_at", "2015-12-18 08:10:06.293750"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:10:06.378280"], ["updated_at", "2015-12-18 08:10:06.378280"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:10:06.396754"], ["updated_at", "2015-12-18 08:10:06.396754"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:10:06.443390"], ["updated_at", "2015-12-18 08:10:06.443390"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:10:06.491170"], ["updated_at", "2015-12-18 08:10:06.491170"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 216ms (Views: 209.0ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/5/schemas" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered schemas/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 5.6ms | ActiveRecord: 3.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:10:06.784427"], ["updated_at", "2015-12-18 08:10:06.784427"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "db_connects"
+Started DELETE "/db_connects/6" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "db_connects"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:10:06.824047"], ["updated_at", "2015-12-18 08:10:06.824047"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/7/schemas" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 1.4ms | ActiveRecord: 3.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:10:06.873977"], ["updated_at", "2015-12-18 08:10:06.873977"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/8/edit" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered db_connects/_form.html.erb (3.8ms)
+  Rendered db_connects/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:10:06.913501"], ["updated_at", "2015-12-18 08:10:06.913501"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started DELETE "/db_connects/9" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.8ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (2.2ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:10:06 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.0ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:10:07 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.0ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:10:07 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (2.4ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 14ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:10:07 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:10:07.047916"], ["updated_at", "2015-12-18 08:10:07.047916"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects/10/schemas" for 127.0.0.1 at 2015-12-18 11:10:07 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 2.1ms | ActiveRecord: 3.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "db_connects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "articles" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.9ms)[0m            SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+
+  [1m[36m (0.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'DBConnect_test'[0m
+  [1m[35m (36.4ms)[0m  TRUNCATE TABLE "public"."db_connects", "public"."articles" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "articles" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:02.498952"], ["updated_at", "2015-12-18 08:19:02.498952"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:02.583545"], ["updated_at", "2015-12-18 08:19:02.583545"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:02.602530"], ["updated_at", "2015-12-18 08:19:02.602530"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:02.637350"], ["updated_at", "2015-12-18 08:19:02.637350"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:02.683971"], ["updated_at", "2015-12-18 08:19:02.683971"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:02 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 215ms (Views: 208.7ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/5/schemas" for 127.0.0.1 at 2015-12-18 11:19:02 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered schemas/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 40ms (Views: 6.4ms | ActiveRecord: 3.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:02.983436"], ["updated_at", "2015-12-18 08:19:02.983436"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:02 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "db_connects"
+Started DELETE "/db_connects/6" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "db_connects"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:03.047812"], ["updated_at", "2015-12-18 08:19:03.047812"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/7/schemas" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 1.7ms | ActiveRecord: 3.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:03.100796"], ["updated_at", "2015-12-18 08:19:03.100796"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/8/edit" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered db_connects/_form.html.erb (6.6ms)
+  Rendered db_connects/edit.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:03.171376"], ["updated_at", "2015-12-18 08:19:03.171376"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+Started DELETE "/db_connects/9" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.2ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (5.3ms)
+  Rendered db_connects/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 22ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.2ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.1ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (5.8ms)
+  Rendered db_connects/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 21ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:03.334770"], ["updated_at", "2015-12-18 08:19:03.334770"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects/10/schemas" for 127.0.0.1 at 2015-12-18 11:19:03 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 1.9ms | ActiveRecord: 3.1ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "articles" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.9ms)[0m            SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+
+  [1m[36m (0.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'DBConnect_test'[0m
+  [1m[35m (37.6ms)[0m  TRUNCATE TABLE "public"."db_connects", "public"."articles" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "articles" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:23.976160"], ["updated_at", "2015-12-18 08:19:23.976160"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:24.060658"], ["updated_at", "2015-12-18 08:19:24.060658"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:24.080306"], ["updated_at", "2015-12-18 08:19:24.080306"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:24.115184"], ["updated_at", "2015-12-18 08:19:24.115184"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:24.162674"], ["updated_at", "2015-12-18 08:19:24.162674"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 219ms (Views: 211.7ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/5/schemas" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered schemas/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 41ms (Views: 5.9ms | ActiveRecord: 3.5ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:24.469756"], ["updated_at", "2015-12-18 08:19:24.469756"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "db_connects"
+Started DELETE "/db_connects/6" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.3ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "db_connects"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:24.535998"], ["updated_at", "2015-12-18 08:19:24.535998"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects/7/schemas" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 2.1ms | ActiveRecord: 3.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:24.591867"], ["updated_at", "2015-12-18 08:19:24.591867"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.3ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects/8/edit" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered db_connects/_form.html.erb (9.2ms)
+  Rendered db_connects/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:24.669900"], ["updated_at", "2015-12-18 08:19:24.669900"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+Started DELETE "/db_connects/9" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.3ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (6.6ms)
+  Rendered db_connects/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 24ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.9ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.1ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (6.4ms)
+  Rendered db_connects/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 23ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:19:24.841375"], ["updated_at", "2015-12-18 08:19:24.841375"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects/10/schemas" for 127.0.0.1 at 2015-12-18 11:19:24 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 1.4ms | ActiveRecord: 3.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "articles" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m            SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+
+  [1m[36m (0.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'DBConnect_test'[0m
+  [1m[35m (36.9ms)[0m  TRUNCATE TABLE "public"."db_connects", "public"."articles" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "articles" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:05.108825"], ["updated_at", "2015-12-18 08:30:05.108825"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:05.193635"], ["updated_at", "2015-12-18 08:30:05.193635"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:05.212398"], ["updated_at", "2015-12-18 08:30:05.212398"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:05.253051"], ["updated_at", "2015-12-18 08:30:05.253051"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:05.297959"], ["updated_at", "2015-12-18 08:30:05.297959"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 216ms (Views: 209.0ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/5/schemas" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered schemas/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 6.1ms | ActiveRecord: 3.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:05.600341"], ["updated_at", "2015-12-18 08:30:05.600341"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "db_connects"
+Started DELETE "/db_connects/6" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "db_connects"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:05.660706"], ["updated_at", "2015-12-18 08:30:05.660706"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects/7/schemas" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDbConnect Load (0.3ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered schemas/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 19ms (Views: 1.7ms | ActiveRecord: 3.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:05.711873"], ["updated_at", "2015-12-18 08:30:05.711873"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.3ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects/8/edit" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered db_connects/_form.html.erb (5.6ms)
+  Rendered db_connects/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (9.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:05.784175"], ["updated_at", "2015-12-18 08:30:05.784175"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+Started DELETE "/db_connects/9" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.9ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (4.7ms)
+  Rendered db_connects/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (2.8ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (1.3ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (5.7ms)
+  Rendered db_connects/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 21ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:05.941953"], ["updated_at", "2015-12-18 08:30:05.941953"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects/10/schemas" for 127.0.0.1 at 2015-12-18 11:30:05 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered schemas/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 1.4ms | ActiveRecord: 3.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "articles" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m            SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+
+  [1m[36m (0.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'DBConnect_test'[0m
+  [1m[35m (37.1ms)[0m  TRUNCATE TABLE "public"."db_connects", "public"."articles" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "db_connects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "articles" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:32.894701"], ["updated_at", "2015-12-18 08:30:32.894701"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:32 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 234ms (Views: 227.4ms | ActiveRecord: 0.3ms)
+Started GET "/db_connects/1/schemas" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered schemas/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 8.8ms | ActiveRecord: 3.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:33.212745"], ["updated_at", "2015-12-18 08:30:33.212745"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "db_connects"
+Started DELETE "/db_connects/2" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.1ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "db_connects"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:33.278820"], ["updated_at", "2015-12-18 08:30:33.278820"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/3/schemas" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered schemas/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 2.5ms | ActiveRecord: 3.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:33.339194"], ["updated_at", "2015-12-18 08:30:33.339194"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects/4/edit" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered db_connects/_form.html.erb (6.8ms)
+  Rendered db_connects/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "db_connects" ("data_base", "password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data_base", "DBConnect_test"], ["password", "130994"], ["username", "postgres"], ["created_at", "2015-12-18 08:30:33.393623"], ["updated_at", "2015-12-18 08:30:33.393623"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+Started DELETE "/db_connects/5" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "db_connects" WHERE "db_connects"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/db_connects
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[36mDbConnect Load (0.2ms)[0m  [1mSELECT "db_connects".* FROM "db_connects"[0m
+  Rendered db_connects/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.8ms)
+  Rendered db_connects/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (2.8ms)
+  Rendered db_connects/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.7ms)
+  Rendered db_connects/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Started GET "/db_connects/new" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#new as HTML
+  Rendered db_connects/_form.html.erb (0.7ms)
+  Rendered db_connects/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+Started POST "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "db_connect"=>{"data_base"=>"", "username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Принять"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered db_connects/_form.html.erb (2.2ms)
+  Rendered db_connects/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+Started GET "/db_connects" for 127.0.0.1 at 2015-12-18 11:30:33 +0300
+Processing by DbConnectsController#index as HTML
+  [1m[35mDbConnect Load (0.2ms)[0m  SELECT "db_connects".* FROM "db_connects"
+  Rendered db_connects/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
