@@ -8,7 +8,7 @@ class SchemasController < ApplicationController
 
   def show
     collection
-    respond_to do |format|
+      respond_to do |format|
       format.html { }
       format.csv { render text: Schema.to_csv(@columns_names, @model.all) }
     end
@@ -23,8 +23,9 @@ class SchemasController < ApplicationController
       params[:q] = get_search_params_from_session(@db_connect.id, @name)
       @columns_names = @schema.get_table_attributes(@name)
       @model = @schema.get_schemas[@name]
-      @search = @model.ransack(params[:q], :engine => @model)
+      @search = @model.ransack(params[:q], :engine => @model) 
       @collection =  @search.result
+      @collection = Kaminari.paginate_array(@collection).page(params[:page]).per(5)
     end
   end
 

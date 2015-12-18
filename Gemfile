@@ -31,6 +31,7 @@ gem 'guard-rspec', require: false
 gem 'rspec'
 gem 'simplecov'
 gem 'rspec-rails'
+gem "kaminari"
 gem "database_cleaner"
 gem "capybara"
 gem 'factory_girl_rails'
