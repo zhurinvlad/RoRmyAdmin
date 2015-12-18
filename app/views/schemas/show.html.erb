@@ -3,7 +3,15 @@
 	<h1> Пожалуйста, выберите таблицу</h1> 
 <% else %>
 	<h1> <%=  @name.humanize %></h1> 
+        <p>
 
+  <%= search_form_for @search , url: schema_path(@db_connect, name: @name)do |f| %>
+	  <%= f.label :id %>
+	  <%= f.search_field :id %>
+	  <%= f.submit %>
+  <% end %>
+
+  		</p>
 	  <% if @columns_names.include?("id")%>
    <%= link_to 'Добавить',new_abstract_path(@db_connect, name: @name)%>
       <% end %>

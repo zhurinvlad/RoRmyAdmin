@@ -20,7 +20,7 @@ class SchemasController < ApplicationController
     @db_connect = DbConnect.find(params[:id])
     @schema = Schema.new(@db_connect.config)
     if @name = params[:name]
-      params[:q] = get_search_params_from_session(@db_connect.id, @name)
+     # params[:q] = get_search_params_from_session(@db_connect.id, @name)
       @columns_names = @schema.get_table_attributes(@name)
       @model = @schema.get_schemas[@name]
       @search = @model.ransack(params[:q], :engine => @model) 
