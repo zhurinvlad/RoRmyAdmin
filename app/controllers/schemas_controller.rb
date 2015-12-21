@@ -25,6 +25,7 @@ class SchemasController < ApplicationController
       @model = @schema.get_schemas[@name]
       @search = @model.ransack(params[:q], :engine => @model) 
       @collection =  @search.result
+      @search.build_condition
       @collection = Kaminari.paginate_array(@collection).page(params[:page]).per(5)
     end
   end

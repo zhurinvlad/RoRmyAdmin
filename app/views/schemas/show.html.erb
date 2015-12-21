@@ -5,11 +5,22 @@
 	<h1> <%=  @name.humanize %></h1> 
         <p>
 
-  <%= search_form_for @search , url: schema_path(@db_connect, name: @name)do |f| %>
-	  <%= f.label :id %>
-	  <%= f.search_field :id %>
-	  <%= f.submit %>
+<h5>Условия выборки</h5> 
+  <%= search_form_for @search , url: schema_path(@db_connect, name: @name)  do |f| %>
+	  <%= f.condition_fields do |c| %>
+		    <div class="field">
+		    <%= c.attribute_fields do |a| %>
+		    	<%= a.attribute_select %>
+		    <% end %>
+		    <%= c.predicate_select %>
+		    <%= c.value_fields do |v| %>
+		    	<%= v.text_field :value %>
+		    <% end %>	
+ 		    </div>
+	    <% end %>
+	  <div class="actions"> <%= f.submit "Поиск" %> </div>
   <% end %>
+
 
   		</p>
 	  <% if @columns_names.include?("id")%>
@@ -21,7 +32,7 @@
 	    <thead>
 	      <tr>
 	       <% @columns_names.each do |name| %>
-	          <th><%= name %></th>
+	          <th><%= sort_link @search, name.to_sym, name %></th>
 	       <% end %>
 	       <th>Действие</th>
 	      </tr>

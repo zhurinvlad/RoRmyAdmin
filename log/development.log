@@ -47593,3 +47593,358 @@ Processing by SchemasController#show as HTML
   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "products"
   Rendered schemas/show.html.erb within layouts/application (11.0ms)
 Completed 200 OK in 174ms (Views: 115.8ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/db_connects/1/schemas/orders?commit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA&q%5Bc%5D%5B0%5D%5Ba%5D%5B0%5D%5Bname%5D=name&q%5Bc%5D%5B0%5D%5Bp%5D=cont&q%5Bc%5D%5B0%5D%5Bv%5D%5B0%5D%5Bvalue%5D=&q%5Bc%5D%5B1%5D%5Ba%5D%5B0%5D%5Bname%5D=&q%5Bc%5D%5B1%5D%5Bp%5D=cont&q%5Bc%5D%5B1%5D%5Bv%5D%5B0%5D%5Bvalue%5D=&q%5Bs%5D=price+desc&utf8=%E2%9C%93" for 127.0.0.1 at 2015-12-21 22:41:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchemasController#show as HTML
+  Parameters: {"commit"=>"Поиск", "q"=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"name"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>""}}}, "1"=>{"a"=>{"0"=>{"name"=>""}}, "p"=>"cont", "v"=>{"0"=>{"value"=>""}}}}, "s"=>"price desc"}, "utf8"=>"✓", "id"=>"1", "name"=>"orders"}
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mXJCRZKMN Load (0.6ms)[0m  [1mSELECT "orders".* FROM "orders"  ORDER BY "orders"."price" DESC[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "orders"
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "orders"[0m
+  Rendered schemas/show.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 2127ms (Views: 2031.4ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/assets/app.self-061666c376d6b76db3db2200d90baebaf238a31a04a818a991863e2589d9459b.css?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/abstract_objects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-108547bf7102bf19cdb3c2facb43cd624f2507296aec1b2994e683a0af4ae4c6.css?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/fixedheadertable.self-899931047cd3e177d7817905b36b535b30ceaf2b36b0300042479517ab69aa52.css?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/scaffolds.self-79e99afb920516dd1ceee13abc42f0aa3d2e9a85c6b5ef7ba18ea4f6608d68b8.css?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/schemas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/db_connects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.self-22f6ad859a160d38bc12dab58038e1bd153dac1f587ff1d52f293292ac6c52ba.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.self-d1b29780d7fbc5bcd8486f2dd22d50e00b7d44a8aa13dd0bd7510499f2a3265b.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.self-a1ba8cd0ece53696716902836f3fc9665326b97fc3539e246ca074d5ed9e8f0b.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.self-b6514fb429802405e14c691417fd48a3467fc932ad087eafa1f643bf614f9834.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.self-83e1245ad8a936f37a62990238dfe6f499935488177fd5365cb6291b0e6d2299.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.self-8170fc59b889f7d7f25e963fb1a6a068bd9790cc747749555626a523e565bc2d.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.self-826a886511eac2d47459aa2beaced88ca108cfa09745e84e8e1d326da74ac502.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.self-f7ccec381e00cb3f9bde10f269cac0145d4926fa87aa0e0a184c5629a7c1d58d.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.self-a7f23233d99b75f7977db57b9a3094a0e10746ffcc29be543cafaa4d0e85ac85.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.self-b0aaf8a38ef34e6d4622926d9840c3131a9b5495da2bf362d57d126a45833345.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.self-164e327a1b9b3eb767ec0ee7f9cb7274aca9cc39b988fa2629c6e813e9f44309.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.self-a65cf8b6ece530a8ee80514d5b17ffe4b87a57ea4d9aa798eee1f7ad1f69c335.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.self-1bfe12975d90ba870ccbe0eef4c8bd08ce29f47f0eb135e3cfa5846ca99f76b9.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-94f59a48294d99f8d9b7632cd5a1742670c7735fe37ec7c555aab939b635fdde.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/nprogress.self-8a27143603075e04460265784dea9921416620e423dc9d126dc633e2e0ea2873.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/nprogress-turbolinks.self-f099bc82dc15800ac078f5b9b54074df953697ca867c858d1132873ed1d2d491.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/abstract_objects.self-386345c3a974517e3a6e8d2a72ef4843c9a9b642ac8e81d3563b0d309fd8f28a.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/bootstrap.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/db_connects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/schemas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2015-12-21 22:41:15 +0300
+
+
+Started GET "/db_connects/1/schemas/orders?commit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA&q%5Bc%5D%5B0%5D%5Ba%5D%5B0%5D%5Bname%5D=name&q%5Bc%5D%5B0%5D%5Bp%5D=cont&q%5Bc%5D%5B0%5D%5Bv%5D%5B0%5D%5Bvalue%5D=&q%5Bc%5D%5B1%5D%5Ba%5D%5B0%5D%5Bname%5D=&q%5Bc%5D%5B1%5D%5Bp%5D=cont&q%5Bc%5D%5B1%5D%5Bv%5D%5B0%5D%5Bvalue%5D=&q%5Bs%5D=price+desc&utf8=%E2%9C%93" for 127.0.0.1 at 2015-12-21 22:42:52 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"commit"=>"Поиск", "q"=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"name"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>""}}}, "1"=>{"a"=>{"0"=>{"name"=>""}}, "p"=>"cont", "v"=>{"0"=>{"value"=>""}}}}, "s"=>"price desc"}, "utf8"=>"✓", "id"=>"1", "name"=>"orders"}
+  [1m[35mDbConnect Load (0.4ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPGRSPFKX Load (0.6ms)[0m  [1mSELECT "orders".* FROM "orders"  ORDER BY "orders"."price" DESC[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "orders"
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "orders"[0m
+  Rendered schemas/show.html.erb within layouts/application (79.9ms)
+Completed 200 OK in 352ms (Views: 265.7ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/assets/abstract_objects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/app.self-061666c376d6b76db3db2200d90baebaf238a31a04a818a991863e2589d9459b.css?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/db_connects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-108547bf7102bf19cdb3c2facb43cd624f2507296aec1b2994e683a0af4ae4c6.css?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/schemas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/scaffolds.self-79e99afb920516dd1ceee13abc42f0aa3d2e9a85c6b5ef7ba18ea4f6608d68b8.css?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/fixedheadertable.self-899931047cd3e177d7817905b36b535b30ceaf2b36b0300042479517ab69aa52.css?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.self-22f6ad859a160d38bc12dab58038e1bd153dac1f587ff1d52f293292ac6c52ba.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.self-d1b29780d7fbc5bcd8486f2dd22d50e00b7d44a8aa13dd0bd7510499f2a3265b.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.self-a1ba8cd0ece53696716902836f3fc9665326b97fc3539e246ca074d5ed9e8f0b.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.self-b6514fb429802405e14c691417fd48a3467fc932ad087eafa1f643bf614f9834.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.self-83e1245ad8a936f37a62990238dfe6f499935488177fd5365cb6291b0e6d2299.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.self-8170fc59b889f7d7f25e963fb1a6a068bd9790cc747749555626a523e565bc2d.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.self-826a886511eac2d47459aa2beaced88ca108cfa09745e84e8e1d326da74ac502.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.self-f7ccec381e00cb3f9bde10f269cac0145d4926fa87aa0e0a184c5629a7c1d58d.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.self-a7f23233d99b75f7977db57b9a3094a0e10746ffcc29be543cafaa4d0e85ac85.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.self-b0aaf8a38ef34e6d4622926d9840c3131a9b5495da2bf362d57d126a45833345.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.self-164e327a1b9b3eb767ec0ee7f9cb7274aca9cc39b988fa2629c6e813e9f44309.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.self-a65cf8b6ece530a8ee80514d5b17ffe4b87a57ea4d9aa798eee1f7ad1f69c335.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.self-1bfe12975d90ba870ccbe0eef4c8bd08ce29f47f0eb135e3cfa5846ca99f76b9.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-94f59a48294d99f8d9b7632cd5a1742670c7735fe37ec7c555aab939b635fdde.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/nprogress.self-8a27143603075e04460265784dea9921416620e423dc9d126dc633e2e0ea2873.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/nprogress-turbolinks.self-f099bc82dc15800ac078f5b9b54074df953697ca867c858d1132873ed1d2d491.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/abstract_objects.self-386345c3a974517e3a6e8d2a72ef4843c9a9b642ac8e81d3563b0d309fd8f28a.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/bootstrap.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/db_connects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/schemas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2015-12-21 22:42:53 +0300
+
+
+Started GET "/db_connects/1/schemas/orders?commit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA&q%5Bc%5D%5B0%5D%5Ba%5D%5B0%5D%5Bname%5D=name&q%5Bc%5D%5B0%5D%5Bp%5D=cont&q%5Bc%5D%5B0%5D%5Bv%5D%5B0%5D%5Bvalue%5D=&q%5Bc%5D%5B1%5D%5Ba%5D%5B0%5D%5Bname%5D=&q%5Bc%5D%5B1%5D%5Bp%5D=cont&q%5Bc%5D%5B1%5D%5Bv%5D%5B0%5D%5Bvalue%5D=&q%5Bs%5D=price+asc&utf8=%E2%9C%93" for 127.0.0.1 at 2015-12-21 22:42:58 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"commit"=>"Поиск", "q"=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"name"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>""}}}, "1"=>{"a"=>{"0"=>{"name"=>""}}, "p"=>"cont", "v"=>{"0"=>{"value"=>""}}}}, "s"=>"price asc"}, "utf8"=>"✓", "id"=>"1", "name"=>"orders"}
+  [1m[35mDbConnect Load (0.7ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTGEEBLHM Load (0.6ms)[0m  [1mSELECT "orders".* FROM "orders"  ORDER BY "orders"."price" ASC[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "orders"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "orders"[0m
+  Rendered schemas/show.html.erb within layouts/application (51.1ms)
+Completed 200 OK in 236ms (Views: 179.3ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/db_connects/1/schemas/orders?commit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA&q%5Bc%5D%5B0%5D%5Ba%5D%5B0%5D%5Bname%5D=name&q%5Bc%5D%5B0%5D%5Bp%5D=cont&q%5Bc%5D%5B0%5D%5Bv%5D%5B0%5D%5Bvalue%5D=&q%5Bc%5D%5B1%5D%5Ba%5D%5B0%5D%5Bname%5D=&q%5Bc%5D%5B1%5D%5Bp%5D=cont&q%5Bc%5D%5B1%5D%5Bv%5D%5B0%5D%5Bvalue%5D=&q%5Bs%5D=price+desc&utf8=%E2%9C%93" for 127.0.0.1 at 2015-12-21 22:42:59 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"commit"=>"Поиск", "q"=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"name"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>""}}}, "1"=>{"a"=>{"0"=>{"name"=>""}}, "p"=>"cont", "v"=>{"0"=>{"value"=>""}}}}, "s"=>"price desc"}, "utf8"=>"✓", "id"=>"1", "name"=>"orders"}
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSWRRQURH Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders"  ORDER BY "orders"."price" DESC[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "orders"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "orders"[0m
+  Rendered schemas/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 238ms (Views: 185.9ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/db_connects/1/schemas/orders?commit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA&q%5Bc%5D%5B0%5D%5Ba%5D%5B0%5D%5Bname%5D=name&q%5Bc%5D%5B0%5D%5Bp%5D=cont&q%5Bc%5D%5B0%5D%5Bv%5D%5B0%5D%5Bvalue%5D=&q%5Bc%5D%5B1%5D%5Ba%5D%5B0%5D%5Bname%5D=&q%5Bc%5D%5B1%5D%5Bp%5D=cont&q%5Bc%5D%5B1%5D%5Bv%5D%5B0%5D%5Bvalue%5D=&q%5Bs%5D=price+desc&utf8=%E2%9C%93" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"commit"=>"Поиск", "q"=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"name"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>""}}}, "1"=>{"a"=>{"0"=>{"name"=>""}}, "p"=>"cont", "v"=>{"0"=>{"value"=>""}}}}, "s"=>"price desc"}, "utf8"=>"✓", "id"=>"1", "name"=>"orders"}
+  [1m[35mDbConnect Load (0.4ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mQFFOGQHI Load (0.6ms)[0m  [1mSELECT "orders".* FROM "orders"  ORDER BY "orders"."price" DESC[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "orders"
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "orders"[0m
+  Rendered schemas/show.html.erb within layouts/application (56.7ms)
+Completed 200 OK in 272ms (Views: 198.4ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/assets/app.self-061666c376d6b76db3db2200d90baebaf238a31a04a818a991863e2589d9459b.css?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/abstract_objects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-108547bf7102bf19cdb3c2facb43cd624f2507296aec1b2994e683a0af4ae4c6.css?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/db_connects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/fixedheadertable.self-899931047cd3e177d7817905b36b535b30ceaf2b36b0300042479517ab69aa52.css?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/scaffolds.self-79e99afb920516dd1ceee13abc42f0aa3d2e9a85c6b5ef7ba18ea4f6608d68b8.css?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/schemas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.self-22f6ad859a160d38bc12dab58038e1bd153dac1f587ff1d52f293292ac6c52ba.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.self-d1b29780d7fbc5bcd8486f2dd22d50e00b7d44a8aa13dd0bd7510499f2a3265b.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.self-a1ba8cd0ece53696716902836f3fc9665326b97fc3539e246ca074d5ed9e8f0b.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.self-b6514fb429802405e14c691417fd48a3467fc932ad087eafa1f643bf614f9834.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.self-83e1245ad8a936f37a62990238dfe6f499935488177fd5365cb6291b0e6d2299.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.self-8170fc59b889f7d7f25e963fb1a6a068bd9790cc747749555626a523e565bc2d.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.self-826a886511eac2d47459aa2beaced88ca108cfa09745e84e8e1d326da74ac502.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.self-f7ccec381e00cb3f9bde10f269cac0145d4926fa87aa0e0a184c5629a7c1d58d.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.self-a7f23233d99b75f7977db57b9a3094a0e10746ffcc29be543cafaa4d0e85ac85.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.self-b0aaf8a38ef34e6d4622926d9840c3131a9b5495da2bf362d57d126a45833345.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.self-164e327a1b9b3eb767ec0ee7f9cb7274aca9cc39b988fa2629c6e813e9f44309.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.self-a65cf8b6ece530a8ee80514d5b17ffe4b87a57ea4d9aa798eee1f7ad1f69c335.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.self-1bfe12975d90ba870ccbe0eef4c8bd08ce29f47f0eb135e3cfa5846ca99f76b9.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-94f59a48294d99f8d9b7632cd5a1742670c7735fe37ec7c555aab939b635fdde.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/nprogress.self-8a27143603075e04460265784dea9921416620e423dc9d126dc633e2e0ea2873.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/nprogress-turbolinks.self-f099bc82dc15800ac078f5b9b54074df953697ca867c858d1132873ed1d2d491.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/abstract_objects.self-386345c3a974517e3a6e8d2a72ef4843c9a9b642ac8e81d3563b0d309fd8f28a.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/bootstrap.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/db_connects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/schemas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2015-12-21 22:43:01 +0300
+
+
+Started GET "/db_connects/1/schemas/orders?utf8=%E2%9C%93&q%5Bc%5D%5B0%5D%5Ba%5D%5B0%5D%5Bname%5D=name&q%5Bc%5D%5B0%5D%5Bp%5D=cont&q%5Bc%5D%5B0%5D%5Bv%5D%5B0%5D%5Bvalue%5D=Vlad&commit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA" for 127.0.0.1 at 2015-12-21 22:43:08 +0300
+Processing by SchemasController#show as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"name"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>"Vlad"}}}}}, "commit"=>"Поиск", "id"=>"1", "name"=>"orders"}
+  [1m[35mDbConnect Load (0.3ms)[0m  SELECT  "db_connects".* FROM "db_connects" WHERE "db_connects"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mORXBLJBV Load (0.4ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE ("orders"."name" ILIKE '%Vlad%')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "orders" WHERE ("orders"."name" ILIKE '%Vlad%')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "orders" WHERE ("orders"."name" ILIKE '%Vlad%')[0m
+  Rendered schemas/show.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 259ms (Views: 195.9ms | ActiveRecord: 14.0ms)
